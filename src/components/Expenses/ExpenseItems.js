@@ -1,18 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ExpenseDate from "../Expenses/ExpenseDate";
 import Card from "../UI/Card";
 import "../Expenses/ExpenseItems.css";
 const ExpenseItems = (props) =>
 {
+    const [title , setTitle]=useState(props.title);
+
+    
+    
     // const expenseDate=new Date(2023,8,3);
     // const expenseTitle="car insurance";
     // const expenseAmount=300;
 //NOTE: we have remove hardcode data and make it very easy , now we will see how could we see that things again and again ? the Answer is using "Props {properties}"
 
 //All react events starts from "on" like onclick etc "on" + "Event named" that we want to be happen
-    let title= props.title
     const clickHandler = ()=> { //for naming function try to Named as "event name + Handler" for example here is evet name is Click so we named function as clickHandler
-        title="updated" //as we have updated the title value but in browser Nothing changes , so we hsve to import react liberery called {usestate} function so that we can change the state and use it..
+        setTitle('Updated !')//as we have updated the title value but in browser Nothing changes , so we hsve to import react liberery called {usestate} function so that we can change the state and use it..{usestate } is also called react "Hooks" . all react Hooks starts with word "use" and it should always write/call inside the React component functions(ExpenseItems) Not in nested function(clickHandler) .. {usestate} function is also called Changing the value 
         console.log(title);
     };
     return (
