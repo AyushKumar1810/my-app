@@ -1,6 +1,6 @@
-import ExpenseDate from "./ExpenseDate";
-import Card from "./Card";
-import "./ExpenseItems.css";
+import ExpenseDate from "../Expenses/ExpenseDate";
+import Card from "../UI/Card";
+import "../Expenses/ExpenseItems.css";
 function ExpenseItems(props){
     // const expenseDate=new Date(2023,8,3);
     // const expenseTitle="car insurance";
