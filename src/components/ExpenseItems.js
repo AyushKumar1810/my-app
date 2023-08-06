@@ -1,4 +1,5 @@
 import ExpenseDate from "./ExpenseDate";
+import Card from "./Card";
 import "./ExpenseItems.css";
 function ExpenseItems(props){
     // const expenseDate=new Date(2023,8,3);
@@ -7,7 +8,7 @@ function ExpenseItems(props){
 //NOTE: we have remove hardcode data and make it very easy , now we will see how could we see that things again and again ? the Answer is using "Props {properties}"
   
     return (
-    <div className="expense-item">
+    <Card className="expense-item">
        <ExpenseDate date={props.date}/>
         
    
@@ -16,7 +17,7 @@ function ExpenseItems(props){
        
             <div className = "expense-item__price">${props.amount}</div>
         </div> 
-    </div>
+    </Card>
     );
 }
 export default ExpenseItems
