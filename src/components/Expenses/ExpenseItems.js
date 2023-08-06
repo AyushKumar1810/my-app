@@ -1,7 +1,8 @@
 import ExpenseDate from "../Expenses/ExpenseDate";
 import Card from "../UI/Card";
 import "../Expenses/ExpenseItems.css";
-function ExpenseItems(props){
+const ExpenseItems = (props) =>
+{
     // const expenseDate=new Date(2023,8,3);
     // const expenseTitle="car insurance";
     // const expenseAmount=300;
