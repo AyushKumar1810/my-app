@@ -2,6 +2,7 @@
 import React from "react";
 import NewExpense from './components/Newexpense/NewExpense'
 import Expenses from "./components/Expenses/Expense";
+//we can't simply pass data from their sibligs to siblings (App is parent and newexpense and expense is their child ) so we can't transfer the data from newExpense To expense , for that we have to send data to parent (App.js) and then Parent will send the data to Chldren . data can be only Transfer from Child To parents or vise-versa..(That is Lifting-the-state-Up) then app.js will send data to expense.js via Props .. the data Transfer is like that NewExpense.js form sending to Expense Then to App.js then it will go to Expense.js
 const   App =  ()=> {
   const expenses = [
     {
